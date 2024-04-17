@@ -14,6 +14,18 @@ public class LinkedLists {
         //Agregamos un elemento al inicio de la lista
         lista.add(0, new Persona(4, "Lei", 22));
 
+        //Eliminemos un elemento
+
+        String nombrePersonaEliminar = "Lei";
+
+        for(Persona persona: lista) {
+            if(persona.getNombre().equals(nombrePersonaEliminar)) {
+                lista.remove(persona);
+                //Es necesario el break para reordenar la linkedList luego de eliminar
+                //un elemento
+                break;
+            }
+        }
         // Recorremos con un forEach
         for( Persona persona : lista) {
             System.out.println(persona.getNombre());
